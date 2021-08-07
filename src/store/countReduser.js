@@ -3,8 +3,10 @@ const defaultState = {
   count: 5,
 }
 
-const INCREMENT = "INCREMENT";
-const DECREMENT = "DECREMENT";
+export const INCREMENT = "INCREMENT";
+export const ASYNC_INCREMENT = "ASYNC_INCREMENT";
+export const DECREMENT = "DECREMENT";
+export const ASYNC_DECREMENT = "ASYNC_DECREMENT";
 
 export const countReducer = (state = defaultState, action) => {
   switch (action.type) {
@@ -17,5 +19,7 @@ export const countReducer = (state = defaultState, action) => {
   }
 }
 
-export const incrementCreator = (payload) => ({type: INCREMENT, payload});
-export const decrementCreator = (payload) => ({type: DECREMENT, payload});
+export const incrementCreator = () => ({type: INCREMENT});
+export const AsyncIncrementCreator = () => ({type: ASYNC_INCREMENT});
+export const decrementCreator = () => ({type: DECREMENT});
+export const AsyncDecrementCreator = () => ({type: ASYNC_DECREMENT});
