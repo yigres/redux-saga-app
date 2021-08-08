@@ -1,4 +1,4 @@
-import {put, takeEvery} from "redux-saga/effects";
+import { put, takeEvery } from "redux-saga/effects";
 import { ASYNC_INCREMENT, ASYNC_DECREMENT, incrementCreator, decrementCreator } from "../store/countReduser";
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms))
